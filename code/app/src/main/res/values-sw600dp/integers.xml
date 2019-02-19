@@ -1,0 +1,11 @@
+<resources>
+
+    <integer name="anim_duration_medium">300</integer>
+    <integer name="anim_duration_long">400</integer>
+
+
+    <integer name="movie_detail_slider_weight">45</integer>
+    <integer name="movie_detail_txt_content_weight">55</integer>
+
+
+</resources>

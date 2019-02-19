@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+                name="mov"
+                type="com.ravi.movies.domain.model.Movie"/>
+
+        <variable
+                name="movAdapter"
+                type="com.ravi.movies.ui.adapter.MovieListAdapter.RepositoryViewHolder"/>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_item"
+            android:paddingEnd="@dimen/movie_item_x_padding"
+            android:paddingStart="@dimen/movie_item_x_padding"
+            android:paddingTop="@dimen/movie_item_top_padding"
+            android:paddingBottom="@dimen/movie_item_bottom_padding"
+            android:layout_marginTop="1dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{movAdapter::onClick}">
+
+
+        <ImageView
+                android:id="@+id/img_movie_thumbnail"
+                android:layout_width="@dimen/movie_item_movie_img_width"
+                android:layout_height="@dimen/movie_item_movie_img_height"
+                android:src="@drawable/img_upcoming"
+                android:contentDescription="@string/img_desc_movie_thumbnail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="fitXY"
+                app:imageUrl="@{mov.posterUrl}"/>
+
+        <TextView
+                android:text="@{mov.title}"
+                android:textColorHint="@color/white"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:textColor="@color/white"
+                android:ellipsize="end"
+                android:maxLines="3"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"
+                android:id="@+id/txt_movie_title"
+                app:layout_constraintStart_toEndOf="@+id/img_movie_thumbnail"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/img_play_icon"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintBottom_toBottomOf="@+id/img_movie_thumbnail"
+                app:layout_constraintVertical_bias="0.0"/>
+
+        <ImageView
+                android:id="@+id/img_play_icon"
+                android:layout_width="@dimen/movie_item_play_img_width"
+                android:layout_height="@dimen/movie_item_play_img_height"
+                android:src="@drawable/ic_mov_play_arrow_black"
+                android:contentDescription="@string/img_desc_movie_play_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/movie_item_play_img_top_margin"
+                app:layout_constraintTop_toTopOf="@+id/txt_movie_title"/>
+
+        <TextView
+                android:text="@{mov.adult ? @string/mov_adult : @string/mov_not_adult }"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_grey"
+                android:id="@+id/txt_adult"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txt_release_date"/>
+
+        <TextView
+                android:text="@{mov.releaseDate}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_grey"
+                android:id="@+id/txt_release_date"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/img_movie_thumbnail"
+                app:layout_constraintStart_toStartOf="parent"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
+
+
+

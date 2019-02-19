@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--Movie Detail-->
+    <dimen name="movie_detail_container_x_margin">64dp</dimen>
+    <dimen name="movie_detail_container_y_margin">32dp</dimen>
+
+    <dimen name="movie_detail_tv_x_margin">14dp</dimen>
+    <dimen name="movie_detail_tv_y_margin">8dp</dimen>
+
+    <dimen name="tab_indicator_size">14dp</dimen>
+
+
+
+    <!--Movie Item-->
+
+    <dimen name="movie_item_x_padding">16dp</dimen>
+    <dimen name="movie_item_top_padding">18dp</dimen>
+    <dimen name="movie_item_bottom_padding">6dp</dimen>
+
+    <dimen name="movie_item_play_img_width">39dp</dimen>
+    <dimen name="movie_item_play_img_height">49dp</dimen>
+    <dimen name="movie_item_play_img_top_margin">10dp</dimen>
+
+
+    <dimen name="about_sub_title_txt_size">20sp</dimen>
+    <dimen name="about_title_txt_size">26sp</dimen>
+    <dimen name="about_txt_size">19sp</dimen>
+
+</resources>

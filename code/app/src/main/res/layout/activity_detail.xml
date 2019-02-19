@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+    <data>
+
+        <import type="android.view.View"/>
+        <variable name="movDetail" type="com.ravi.movies.domain.model.MovieDetail"/>
+
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_root"
+            android:background="@color/black">
+
+        <include
+                android:id="@+id/toolbar"
+                layout="@layout/app_bar"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/toolbar">
+
+            <ss.com.bannerslider.Slider
+                    android:id="@+id/banner_slider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="@integer/movie_detail_slider_weight"
+                    app:slider_loopSlides="true"
+                    app:slider_animateIndicators="true"
+                    app:slider_indicatorSize="@dimen/tab_indicator_size"
+                    app:slider_selectedSlideIndicator="@drawable/selected_slide_indicator"
+                    app:sliderAdapter="@{movDetail.images}"/>
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="@integer/movie_detail_txt_content_weight">
+
+
+                <LinearLayout
+                        android:id="@+id/layout_movie_details_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/movie_detail_container_x_margin"
+                        android:layout_marginEnd="@dimen/movie_detail_container_x_margin"
+                        android:layout_marginTop="@dimen/movie_detail_container_y_margin"
+                        android:visibility="@{movDetail.title == null ? View.INVISIBLE : View.VISIBLE}"
+                        android:background="@drawable/bg_white_rect"
+                        android:gravity="center_horizontal">
+
+
+                    <TextView
+                            android:id="@+id/tv_title"
+                            android:text="@{movDetail.title}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            style="@style/movie_detail_tv"/>
+
+                    <View
+                            style="@style/movie_detail_divider"/>
+
+                    <TextView
+                            android:id="@+id/tv_overview"
+                            android:text="@{movDetail.overview}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_dull"
+                            android:maxLines="5"
+                            android:ellipsize="end"
+                            style="@style/movie_detail_tv"/>
+
+                    <View
+                            style="@style/movie_detail_divider"/>
+
+                    <RatingBar
+                            android:id="@+id/rb_movie"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:rating="@{movDetail.popularity}"
+                            android:layout_marginBottom="-26dp"
+                            android:layout_gravity="start"
+                            android:numStars="10"
+                            android:scaleX=".6"
+                            android:scaleY=".6"
+                            android:layout_marginTop="2dp"
+                            android:paddingTop="8dp"
+                            android:transformPivotX="0dp"
+                            android:transformPivotY="0dp"
+                            android:isIndicator="true"
+                            android:theme="@style/AppThemeRatingBar"/>
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <include
+                android:id="@+id/loading_indicator"
+                layout="@layout/layout_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</layout>

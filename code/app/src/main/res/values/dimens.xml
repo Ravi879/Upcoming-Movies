@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--Movie Detail-->
+    <dimen name="movie_detail_container_x_margin">16dp</dimen>
+    <dimen name="movie_detail_container_y_margin">18dp</dimen>
+
+    <dimen name="movie_detail_tv_x_margin">8dp</dimen>
+    <dimen name="movie_detail_tv_y_margin">4dp</dimen>
+
+    <dimen name="tab_indicator_size">12dp</dimen>
+
+    <!--Movie Item-->
+
+    <dimen name="movie_item_x_padding">8dp</dimen>
+    <dimen name="movie_item_top_padding">9dp</dimen>
+    <dimen name="movie_item_bottom_padding">2dp</dimen>
+
+    <dimen name="movie_item_movie_img_width">85dp</dimen>
+    <dimen name="movie_item_movie_img_height">95dp</dimen>
+
+    <dimen name="movie_item_play_img_width">35dp</dimen>
+    <dimen name="movie_item_play_img_height">45dp</dimen>
+    <dimen name="movie_item_play_img_top_margin">8dp</dimen>
+
+
+    <dimen name="about_sub_title_txt_size">16sp</dimen>
+    <dimen name="about_title_txt_size">21sp</dimen>
+
+    <dimen name="about_txt_size">15sp</dimen>
+
+    android:textSize=""
+
+</resources>

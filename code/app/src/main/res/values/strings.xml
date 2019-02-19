@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Upcoming Movies</string>
+
+
+    
+    <string name="api_key"><!--TODO add your api key here--></string>
+
+    <!--Image Description-->
+    <string name="img_desc_movie_thumbnail">Movie Thumbnail</string>
+    <string name="img_desc_movie_play_icon">Movie play icon</string>
+
+
+    <!--Movie type-->
+    <string name="mov_adult">(A)</string>
+    <string name="mov_not_adult">(U/A)</string>
+
+    <!--Activity Title-->
+    <string name="activity_movie_list_title">Upcoming Movies</string>
+    <string name="activity_movie_detail_title">Movie Details</string>
+    <string name="activity_about_title">About</string>
+
+    <!--About-->
+    <string name="about_developed_by">Developed By</string>
+    <string name="about_developer_name">Ravi Gadhiya</string>
+    <string name="about_developer_email">gadhiyara@gmail.com</string>
+    <string name="about_developer_mob_no">+91 9370776313</string>
+
+    <!--Menu action-->
+    <string name="movie_list_menu_action_about">About</string>
+
+
+</resources>

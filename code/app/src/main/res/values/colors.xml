@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EB3926</color>
+    <color name="colorPrimaryDark">#9c291d</color>
+    <color name="colorAccent">#479754</color>
+
+    <color name="snackbar_action" translate="false">#FFF4E736</color>
+
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
+    <color name="light_grey">#8FFF</color>
+
+
+    <color name="loading_indicator">#9c291d</color>
+
+    <!--main-->
+    <color name="bg_home">#303030</color>
+    <color name="bg_item">#424242</color>
+
+    <!--detail-->
+    <color name="bg_top">#303030</color>
+    <color name="bg_bottom">#272727</color>
+    <color name="bg_about">#303030</color>
+
+    <color name="white_dull">#c8ffffff</color>
+
+    <color name="rating_bar_activated">#FFFDEC00</color>
+    <color name="rating_bar_normal">#8FFF</color>
+
+</resources>
